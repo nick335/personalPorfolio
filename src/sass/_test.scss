@@ -1,0 +1,178 @@
+@use './abstract/font.scss' as *;
+body{
+  height: 100vh;
+  background-color: black;
+  color: white;
+  font-size:20px;
+  font-family: $secondary-font;
+  font-style: italic;
+}
+$background: #fefefe;
+$text: #4b507a;
+
+$cyan: #60daaa;
+$yellow: #fbca67;
+$orange: #ff8a30;
+$red: #f45e61;
+$purple: #6477b9;
+$blue: #0eb7da;
+
+.App{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  // width: 100%;
+  // height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+// Basic styles
+.draw {
+  background: none;
+  border: 0;
+  box-sizing: border-box;
+  font-family: $secondary-font;
+  margin: 1em;
+  padding: 1em 2em;
+  
+  // Using inset box-shadow instead of border for sizing simplicity
+  box-shadow: inset 0 0 0 2px transparent;
+  color: $red;
+  font-size: inherit;
+  font-weight: 700;
+
+  // Required, since we're setting absolute on pseudo-elements
+  position: relative;
+  vertical-align: middle;
+
+  &::before,
+  &::after {
+    box-sizing: inherit;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.draw {
+    // transition: color 0.25s;
+   
+  &::before,
+  &::after {
+    // Set border to invisible, so we don't see a 4px border on a 0x0 element before the transition starts
+    border: 1px solid transparent;
+    width: 0;
+    height: 0;
+  }
+
+  // This covers the top & right borders (expands right, then down)
+  &::before {
+    border: 1px solid transparent;
+    width: 0;
+    height: 0;
+    top: 0;
+    left: 0;
+    animation: top 1.3s ease-in 1 both;
+  }
+
+  @keyframes top {
+    0%{
+      width: 0;
+      height: 0;
+      border-top-color: transparent;
+      border-right-color: transparent ;
+    }
+    50%{
+      width: 100%;
+      height: 0;
+      border-top-color: $cyan;
+    }
+    100%{
+      width: 100%;
+      height: 100%;
+      border-top-color: $cyan;
+      border-right-color: $cyan;
+    }
+  }
+  // @keyframes right {
+  //   0%{
+  //     width: 0%;
+  //     height: 0;
+  //     border-right-color: transparent;
+  //   }
+  //   1%{
+  //     width: 100%;
+  //     height: 0;
+  //     border-right-color: transparent;
+  //   }
+  //   100%{
+  //     width: 100%;
+  //     height: 100%;
+  //     border-right-color: $cyan;
+  //   }
+  // }
+
+  // And this the bottom & left borders (expands left, then up)
+  &::after {
+    border: 5px solid transparent;
+    width: 0;
+    height: 0;
+    bottom: 0;
+    right: 0;
+    animation-name: after;
+    animation-fill-mode: both;
+    animation-duration: 1s;
+    animation-delay: 1.3s;
+    animation-timing-function: ease-in;
+  }
+  @keyframes after {
+    0%{
+      width: 0%;
+      height: 0%;
+      border-bottom-color: transparent;
+      border-left-color: transparent;
+    }
+    50%{
+      width: 100%;
+      height: 0;
+      border-bottom-color: $cyan;
+    }
+    100%{
+      width: 100%;
+      height: 100%;
+      border-bottom-color: $cyan;
+      border-left-color: $cyan;
+    }
+  }
+  
+  // &:hover {
+  //   color: $cyan;
+  // }
+
+  // // Hover styles
+  // &:hover::before,
+  // &:hover::after {
+  //   width: 100%;
+  //   height: 100%;
+  // }
+
+  // &:hover::before {
+  //   border-top-color: $cyan; // Make borders visible
+  //   border-right-color: $cyan;
+  //   transition:
+  //     width 0.25s ease-out, // Width expands first
+  //     height 0.25s ease-out 0.25s; // And then height
+  // }
+
+  // &:hover::after {
+  //   border-bottom-color: $cyan; // Make borders visible
+  //   border-left-color: $cyan;
+  //   transition:
+  //     border-color 0s ease-out 0.5s, // Wait for ::before to finish before showing border
+  //     width 0.25s ease-out 0.5s, // And then exanding width
+  //     height 0.25s ease-out 0.75s; // And finally height
+  // }
+}

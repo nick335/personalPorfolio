@@ -1,0 +1,26 @@
+// dark theme
+$bg-dark-color: hsl(0,4.8%,12.4%);
+$header-dark-color: hsl(5, 13%, 83%);
+$text-dark-color: hsl(4.3,5%,60.6%);
+$bg-projectDescription-dark-color: hsl(-13, 6%, 19%);
+$boxShadow-dark-color: hsl(-11, 34%, 9%);
+$input-dark-color: hsl(60, 12.3%, 77.6%);
+$label-dark-color:hsl(185.2,54.8%,54.9%);
+$borderBottom-dark-color:hsl(185.2,54.8%,54.9%);
+
+// light theme 
+$bg-light-color: hsl(0, 11%, 95%);
+$header-light-color: hsl(214, 52%, 30%);
+$text-light-color: hsl(214, 25%, 35%);
+$bg-projectDescription-light-color: hsl(-13, 14%, 97%);
+$boxShadow-light-color: hsl(-11, 42%, 89%);
+$borderBottom-light-color: hsl(184.7,45.2%,32.9%);
+$label-light-color: hsl(184.7,45.2%,32.9%);
+$input-light-color: hsl(8.6,11.9%,88.4%);
+
+// $text-light-color: hsl(0, 5.4%, 25.3%);
+
+// highlight theme
+$bg-highlight-color: hsl(5, 100%, 69%);
+$highlight-hover-color: rgba(255,110,97, 0.1);
+$image-overlay-color: rgba(255,110,97, 0.65);

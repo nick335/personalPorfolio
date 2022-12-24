@@ -1,0 +1,31 @@
+@use '../abstract/color.scss' as *;
+
+.page-template{
+  min-height: 100vh;
+  height: 100%;
+  // padding-bottom: 2rem;
+  animation: change 0.5s ease-in-out 3.7s 1 both;
+
+  // @keyframes change  {
+  //   0%{
+  //     background-color: hsl(5, 13%,3%);
+  //   }
+  //   100%{
+  //     background-color: $bg-dark-color;
+  //   }
+  // }
+} 
+.page-template_menuopen{
+  max-height: 100vh;
+  overflow: hidden;
+}
+
+.page-template-dark{
+  background:  $bg-dark-color;
+  transition: all ease-in-out 0.5s;
+}
+
+.page-template-light{
+  background-color: $bg-light-color;
+  transition: all ease-in-out 0.5s;
+}

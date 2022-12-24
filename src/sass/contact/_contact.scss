@@ -1,0 +1,225 @@
+@use '../abstract/color.scss' as *;
+@use '../abstract/font.scss' as *;
+@use '../abstract/mixins.scss' as *;
+
+.contact{
+  @include container;
+  align-self: center;
+
+  &-head{
+    margin-top: 3rem;
+    .headerDiv{
+      margin-bottom: 1.5rem;
+      @include justFlex;
+      align-items: center;
+        h3{
+        font-family: $secondary-font;
+        font-weight: 700;
+        font-size: 1.9rem;
+
+
+        span{
+          margin-right: 0.6rem;
+          color: $bg-highlight-color;
+        }
+      }
+      .line{
+        margin-left: 2rem;
+        width: 40%;
+        height: 1px;
+      }
+    }
+    p{
+      max-width: 80%;
+      font-family: $primary-font;
+      font-weight: 400;
+      font-size: 1.3rem;
+      line-height: 26px;
+    }
+  }
+  &-body{
+    margin-top: 2rem;
+    padding-bottom: 3rem;
+    @include justFlex;
+
+    &_form{
+      width: 46%;
+
+      .input_div{
+        @include flexColumn;
+        margin-bottom: 1.3rem;
+
+        label{
+          font-size: 23px;
+          font-weight: 500;
+          font-family: $primary-font;
+        }
+        input,
+        textarea{
+          font-size: 20px;
+          border: none;
+          padding: 6px 8px;
+          line-height: 27px;
+          border-radius: 3px;
+
+        }
+        textarea{
+          max-width: 100%;
+          min-width: 100%;
+          min-height: 156px;
+        }
+      }
+      .submit_div{
+        
+        input{
+          outline: none;
+          font-family: $primary-font;
+          font-size: 21px;
+          font-weight: 400;
+          border: none;
+          margin-left: auto;
+          display: block;
+          padding: 0.5rem 1rem;
+          padding-top: 1rem;
+        }
+      }
+    }
+    &_otherOptions{
+      margin-left: 3rem;
+      margin-top: 1.5rem;
+
+      h4{
+        font-family: $primary-font;
+        font-size: 1.5rem;
+        font-weight: 500;
+        text-transform: capitalize;
+      }
+      .contactInfo_lists{
+        margin-top: 1rem;
+        li{
+          font-family: $primary-font;
+          font-size: 1.3rem;
+          font-weight: 400;
+          margin-bottom: 3px;
+        }
+      }
+    }
+  }
+
+}
+.contact-dark{
+  // display: none;
+
+  .contact-head{
+
+    .headerDiv{
+
+      h3{
+        color:  $header-dark-color;
+      }
+      .line{
+        background-color: $header-dark-color;
+      }
+    }
+    p{
+      color: $text-dark-color;
+    }
+  }
+  .contact-body{
+    &_form{
+      .input_div{
+
+        label{
+          color: $label-dark-color;
+        }
+        input,
+        textarea{
+          background-color: $input-dark-color;
+          border-bottom: 1.3px solid $borderBottom-dark-color;
+          color: $text-dark-color;
+
+          &:focus{
+            background-color: transparent;
+            transition: all 0.2s ease-in 0s;
+          }
+        }
+      }
+      .submit_div{
+
+        input{
+          background-color: $label-dark-color;
+          color: black;
+        }
+      }
+    }
+    &_otherOptions{
+
+      h4{
+        color: $header-dark-color;
+      }
+      .contactInfo_lists{
+
+        li{
+          color: $text-dark-color;
+        }
+      }
+    }
+  }
+}
+.contact-light{
+
+  .contact-head{
+    .headerDiv{
+
+      h3{
+        color:  $header-light-color;
+      }
+      .line{
+        background-color: $header-light-color;
+      }
+    }
+    p{
+      color: $text-light-color;
+    }
+  }
+  .contact-body{
+    &_form{
+      .input_div{
+
+        label{
+          color: $label-light-color;
+        }
+        input,
+        textarea{
+          background-color: $input-light-color;
+          border-bottom: 1.3px solid $borderBottom-light-color;
+          color: $text-light-color;
+
+          &:focus{
+            background-color: transparent;
+            transition: all 0.2s ease-in 0s;
+          }
+        }
+      }
+      .submit_div{
+
+        input{
+          background-color: $label-light-color;
+          color: $input-light-color;
+        }
+      }
+    }
+    &_otherOptions{
+
+      h4{
+        color: $header-light-color;
+      }
+      .contactInfo_lists{
+
+        li{
+          color: $text-light-color;
+        }
+      }
+    }
+  }
+}

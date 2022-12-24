@@ -1,0 +1,60 @@
+@use '../abstract/color.scss' as *;
+@use '../abstract/font.scss' as *;
+@use '../abstract/mixins.scss' as *;
+@use '../abstract/mediaQuery.scss' as *;
+
+@media #{$media-lg-desktop}{
+  .contact{
+    @include containerxl;
+
+    &-body{
+
+      &_form{
+        width: 50%;
+
+        .input_div{
+          margin-bottom: 1.6rem;
+        }
+      }
+    }
+
+  }
+}
+@media #{$media-desktop}{
+  .contact{
+    @include containerlg;
+    padding-left: 10px;
+    
+    &-body{
+      &_form{
+        width: 60%;
+      }
+    }
+  }
+}
+@media #{$media-tablet-xl}{
+  .contact{
+    max-width: 90%;
+
+    &-head{
+      // display: none;
+      margin-top: 4rem;
+    }
+  }
+}
+@media #{$media-tablet}{
+  .contact{
+
+    &-body{
+      @include flexColumn;
+
+      &_form{
+        width: 75%;
+      }
+      &_otherOptions{
+        margin-left: 0;
+        margin-top: 2.5rem;
+      }
+    }
+  }
+}

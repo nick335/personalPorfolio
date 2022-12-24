@@ -1,0 +1,245 @@
+@use '../abstract/color.scss' as *;
+@use '../abstract/font.scss' as *;
+@use '../abstract/mixins.scss' as *;
+@use '../abstract/mediaQuery.scss' as *;
+
+
+@media #{$media-lg-desktop}{
+  .home-page{
+
+    .nav{
+
+      &-structure{
+        width: 92%;
+      }
+    }
+
+    .home-content{
+      @include containerxl;
+    }
+    .sidebar{
+      &_social-icons{
+        left: 4%;
+      }
+      &_email{
+        right: 4%;
+      }
+    }
+  }
+}
+@media #{$media-lg-long-desktop}{
+  .home-page{
+
+    .home-motion{
+      margin-top: 0;
+      margin-top: auto;
+      margin-bottom: auto;
+    }
+  }
+}
+@media #{$media-desktop}{
+  .home-page{
+    .nav{
+
+      &-structure{
+        width: 95%;
+      }
+    }
+    .home-content{
+      @include containerlg;
+      padding-left: 10px;
+
+
+      &_content{
+        &-caption{
+          font-size: 74px;
+        }
+      }
+    }
+    .sidebar{
+      &_social-icons{
+        left: 2.5%;
+      }
+      &_email{
+        right: 2.5%;
+      }
+    }
+  }
+}
+@media #{$media-tablet-xl}{
+  .home-page{
+    .nav{
+      &-structure{
+        padding: 1.7rem 0;
+        padding-bottom: 0;
+      }
+    }
+
+    .home-motion{
+      margin-top: 0;
+      margin-top: auto;
+      margin-bottom: auto;
+    }
+    .home-content{
+      margin-top: 0;
+      max-width: 80%;
+      padding-left: 0;
+    }
+  }
+}
+@media #{$media-tablet}{
+  .home-page{
+    .nav{
+      
+      &-structure{
+        width: 90%;
+        .page-route{
+          display: none;
+          margin: 0;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          z-index: 90;
+          height: 100vh;
+
+          &_lists{
+            // transition-delay: 0.2s;
+            transition: all 1s ease-in;
+            @include flexColumn;
+            gap: 2.2rem;
+            position: absolute;
+            right: -55%;
+            width: 55%;
+            height: 100%;
+            // margin-right: -55%;
+            // margin-left: auto;
+
+            .list{
+              @include flexColumn;
+              gap: 0.5rem;
+              font-size: 22px;
+              align-items: center;
+
+              span{
+                font-size: 16px;
+                text-align: center;
+              }
+            }
+          }
+        }
+        .page-route.is-active{
+          display: block;
+
+          .page-route_lists{
+            animation: slideIN 0.2s ease-in 0.05s 1 both;
+            // animation: name duration timing-function delay iteration-count direction fill-mode;
+
+            @keyframes slideIN {
+              0%{
+                right: -55%;
+              }
+              100%{
+                right: 0;
+              }
+            }
+          }
+        }
+        .theme-controller{
+          z-index: 100;
+          position: static;
+          // top: 2.5rem;
+          // right: 15%;
+          margin-left: auto;
+          margin-right: 5.5rem;
+        }
+        .navbar_toggle{
+          position: absolute;
+          top: 2rem;
+          right: 4%;
+          display: block;
+          z-index: 100;
+
+          .bar{
+            position: static;
+            z-index: 100;
+            width: 30px;
+            height: 2px;
+            border-radius: 4px;
+            margin: 6px auto;
+            transition: all 0.3s ease-in-out;
+            background: $bg-highlight-color;
+            display: block;
+            cursor: pointer;
+            }
+        }
+        .navbar_toggle.is-active .bar:nth-child(2){
+          opacity: 0;
+          
+         }
+         .navbar_toggle.is-active .bar:nth-child(1){
+          transform: translateY(9px) rotate(45deg);
+         }
+        .navbar_toggle.is-active .bar:nth-child(3){
+          transform: translateY(-8px) rotate(-45deg);
+         }
+      }
+    }
+
+    .home-content{
+      max-width: 86%;
+
+      &_content{
+
+        &-name{
+          font-size: 60px;
+        }
+        &-caption{
+          font-size: 55px;
+        }
+      }
+    }
+    .sidebar{
+      display: none;
+    }
+  }
+  .home-page-dark{
+    transition: all 0.3s ease-in;
+    .nav{
+
+      &-structure{
+        .page-route{
+          background: rgba(255, 255, 255, 0.05);
+          box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+          backdrop-filter: blur(4.4px);
+          -webkit-backdrop-filter: blur(4.4px);
+
+          &_lists{
+            background-color: $bg-dark-color;
+          }
+        }
+      }
+    }
+  }
+  .home-page-light{
+    transition: all 0.3s ease-in;
+
+    .nav{
+
+      &-structure{
+        .page-route{
+          /* From https://css.glass */
+          background: rgba(0, 0, 0, 0.2);
+          box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+          backdrop-filter: blur(5px);
+          -webkit-backdrop-filter: blur(5px);
+
+          &_lists{
+            background-color: $bg-light-color;
+          }
+        }
+      }
+    }
+  }
+}
+ 

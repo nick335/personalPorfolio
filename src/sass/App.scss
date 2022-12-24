@@ -1,0 +1,12 @@
+@use './abstract/config.scss';
+@use './abstract/color.scss';
+@use './abstract/font.scss';
+@use './abstract/mixins.scss';
+@use './pagetemplate/pagetemplate.scss';
+@use './intro/intro';
+@use './home/home.scss';
+@use './home/homeMediaQuery.scss';
+@use './project/project';
+@use './project/projectMediaQuery';
+@use './contact/contact';
+@use './contact/contactMediaQuery';

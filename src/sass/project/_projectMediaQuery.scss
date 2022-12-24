@@ -1,0 +1,44 @@
+@use '../abstract/color.scss' as *;
+@use '../abstract/font.scss' as *;
+@use '../abstract/mixins.scss' as *;
+@use '../abstract/mediaQuery.scss' as *;
+
+
+@media #{$media-lg-desktop}{
+  .projects{
+    @include containerxl;
+    margin-top: 3.6rem;
+  }
+}
+@media #{$media-desktop}{
+  .projects{
+    @include containerlg;
+  }
+}
+@media #{$media-tablet-xl}{
+  .projects{
+    margin: 0 3.5rem;
+    margin-top: 4rem;
+
+    .project{
+
+      &-imgDiv{
+        width: 60%;
+
+        img{
+          // display: none;
+          height: 300px;
+        }
+      }
+      &-contentDiv{
+        width: 41%;
+        // width: 80%;
+
+        .overflow-div{
+          width: 160%;
+          margin-left: -60%;
+        }
+      }
+    }
+  }
+}
