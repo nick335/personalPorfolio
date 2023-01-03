@@ -14,7 +14,7 @@
 
     h3{
       font-family: $secondary-font;
-      font-size: 1.7rem;
+      font-size: 1.75rem;
       font-weight: 700;
       word-spacing: 0rem;
       margin-right: 2rem;
@@ -74,9 +74,7 @@
       }
     }
     &-contentDiv{
-      position: relative;
       width: 40%;
-      // display: none;
 
       &_overline{
         h3{
@@ -85,7 +83,6 @@
           color: $bg-highlight-color;
           line-height: 16.9px;
           font-weight: 400;
-          // margin-bottom: 0.35rem;
         } 
       }
       &_name{
@@ -116,7 +113,8 @@
       &_technologies{
 
         ul{
-          @include flexCenter;
+          display: inline-flex;
+          flex-wrap: wrap;
           gap: 1.5rem;
 
           li{
@@ -146,7 +144,6 @@
         width: 120%;
         height: fit-content;
         margin-left: -20%;
-        // background-color: greenyellow;
         z-index: 30;
         @include flexColumn;
         align-items: flex-end;

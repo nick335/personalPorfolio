@@ -58,3 +58,46 @@
     }
   }
 }
+@media #{$media-mobile}{
+  .contact{
+
+    // display: none;
+    &-head{
+      .headerDiv{
+
+        .line{
+          display: none;
+        }
+      }
+      p{
+        max-width: 100%;
+      }
+    }
+    &-body{
+
+      &_form{
+        width: 95%;
+      }
+    }
+  }
+}
+@media #{$media-mobile-sm}{
+  .contact{
+    // background-color: red;
+    padding-left: 0;
+
+    &-head{
+      .headerDiv{
+        h3{
+          font-size: 1.55rem;
+        }
+      }
+    }
+    &-body{
+      &_form{
+        // display: none;
+        width: 100%;
+      }
+    }
+  }
+}
