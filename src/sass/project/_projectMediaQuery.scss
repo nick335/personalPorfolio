@@ -42,3 +42,149 @@
     }
   }
 }
+@media #{$media-tablet}{
+  .projects{
+    width: 86%;
+    margin-left: auto;
+    margin-right: auto;
+
+    &-header{
+
+      h3{
+        margin-right: 0;
+      }
+
+      div{
+        display: none;
+        // width: 40%;
+      }
+    }
+
+    .project{
+      background: url('../../assets/Sunny-Side-Agency.png');
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      margin: 0;
+      margin-bottom: 2.5rem;
+      line-height: 0;
+      width: 100%;
+      padding: 0;
+      position: relative;
+
+      &-imgDiv{
+        display: none;
+      }
+      &-contentDiv{
+        padding: 3.5rem 2rem;
+        width: 100%;
+        margin: 0;
+        backdrop-filter: blur(5.4px);
+        -webkit-backdrop-filter: blur(5.4px);
+
+        &_overline{
+          h3{
+            font-size: 19px;
+          }
+        }
+
+        &_name{
+          h4{
+            font-size: 28px;
+            margin-top: 0.65rem;
+          }
+        }
+        
+        &_description{
+          padding: 1rem 0;
+          border-radius: 0;
+          box-shadow: 0 0 0 0 transparent;
+          background-color: transparent;
+
+          p{
+            font-size: 18px;
+            line-height: 25px;
+          }
+        }
+        &_technologies{
+          margin-bottom: 1.5rem;
+          ul{
+
+            li{
+              font-size: 17px;
+              
+            }
+          }
+        }
+        &_links{
+          gap: 1.6rem;
+
+          a{
+            font-size: 1.7rem;
+          }
+        }
+
+        .overflow-div{
+          position: static;
+          width: 100%;
+          height: auto;
+          line-height: 0;
+          margin-left: 0;
+          align-items: flex-start;
+          // z-index: 30;
+        }
+      }
+    }
+  }
+  .projects-dark{
+    .project{
+     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      &-contentDiv{
+        transition: all ease-in-out 0.5s;
+        background: rgba(33, 30, 30, 0.9);
+
+      }
+    }
+  }
+  .projects-light{
+    .project{
+      box-shadow: 0 4px 30px rgba(255, 255, 255, 0.1);
+      &-contentDiv{
+        transition: all ease-in-out 0.5s;
+        background: rgba(244,241,241,0.85);
+
+      }
+    }
+  }
+}
+@media #{$media-mobile-sm}{
+  .projects{
+    // background-color: red;
+    width: 90%;
+
+    &-header{
+       h3{
+        font-size: 1.4rem;
+       }
+    }
+    .project{
+      &-contentDiv{
+        &_technologies{
+
+          ul{
+            gap: 1rem;
+          }
+        }
+      }
+    }
+  }
+}
+@media #{$media-mobile-xsm}{
+  .projects{
+    &-header{
+      h3{
+        font-size: 1.3rem;
+      }
+    }
+  }
+}

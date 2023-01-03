@@ -89,6 +89,7 @@
 }
 @media #{$media-tablet}{
   .home-page{
+    // background-color: blue;
     .nav{
       
       &-structure{
@@ -104,7 +105,6 @@
           height: 100vh;
 
           &_lists{
-            // transition-delay: 0.2s;
             transition: all 1s ease-in;
             @include flexColumn;
             gap: 2.2rem;
@@ -112,8 +112,6 @@
             right: -55%;
             width: 55%;
             height: 100%;
-            // margin-right: -55%;
-            // margin-left: auto;
 
             .list{
               @include flexColumn;
@@ -133,8 +131,6 @@
 
           .page-route_lists{
             animation: slideIN 0.2s ease-in 0.05s 1 both;
-            // animation: name duration timing-function delay iteration-count direction fill-mode;
-
             @keyframes slideIN {
               0%{
                 right: -55%;
@@ -148,8 +144,6 @@
         .theme-controller{
           z-index: 100;
           position: static;
-          // top: 2.5rem;
-          // right: 15%;
           margin-left: auto;
           margin-right: 5.5rem;
         }
@@ -242,4 +236,100 @@
     }
   }
 }
- 
+@media #{$media-mobile}{
+  .home-page{
+    .nav{
+      &-structure{
+        .page-route{
+          &_lists{
+            .list{
+              font-size: 18px;
+            }
+          }
+        }
+      }
+    }
+    .home-content{
+
+      &_content{
+
+        &-name{
+          font-size: 50px;
+        }
+        &-caption{
+          margin-top: 0.5rem;
+          font-size: 41px;
+        }
+        &-para{
+          margin-top: 1.35rem;
+        }
+      }
+      &_btn{
+        margin-top: 45px;
+      }
+    }
+  }
+}
+@media #{$media-mobile-sm}{
+  .home-page{
+    .nav{
+      &-structure{
+        .page-route{
+          &_lists{
+            width: 75%;
+          }
+        }
+        .page-route.is-active{
+          .page-route_lists{
+            @keyframes slideIN {
+              0%{
+                right: -75%;
+              }
+              100%{
+                right: 0;
+              }
+            }
+          }
+        }
+        .theme-controller{
+          margin-right: 4.7rem;
+        }
+      }
+    }
+    .home-content{
+      max-width: 90%;
+      &_content{
+        &-name{
+          font-size: 40px;
+          margin-top: 1.9rem;
+        }
+        &-caption{
+          font-size: 37px;
+          margin-top: 0.6rem;
+          line-height: 37px;
+        }
+      }
+      &_btn{
+        margin-top: 50px;
+      }
+    }
+  }
+}
+@media #{$media-mobile-xsm}{
+  .home-page{
+    .nav{
+      &-structure{
+        .theme-controller{
+          margin-right: 3.5rem;
+        }
+      }
+    }
+    .home-content{
+      &_content{
+        &-para{
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}
