@@ -2,6 +2,7 @@ import Nav from "./Nav"
 import HomeContent from "./HomeContent"
 import Contact from "../contact/contact"
 import Projects from "../projects/projects"
+import About from "../about/about"
 import SideBar from "./sideBar"
 import { Routes, Route, useLocation } from "react-router-dom"
 import { AnimatePresence } from "framer-motion"
@@ -20,6 +21,7 @@ export default function HomePage(props){
       <AnimatePresence >
         <Routes location={ location } key={ location.pathname } >
           <Route path="/" element={<HomeContent />} />
+          <Route path="about" element={<About />} />
           <Route path="projects" element={<Projects 
             theme = {props.theme}
           />} />
@@ -28,7 +30,9 @@ export default function HomePage(props){
           />} />
         </Routes>
       </ AnimatePresence>
-      <SideBar />
+      <SideBar 
+          theme = {props.theme}
+      />
     </div>
   )
 }

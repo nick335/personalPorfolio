@@ -3,7 +3,7 @@ import HomePage from "./home/HomePage";
 import React from "react";
 
 export default function PageTemplate(){
-  const [darktheme, setDarktheme] = React.useState(true)
+  const [darktheme, setDarktheme] = React.useState( JSON.parse(localStorage.getItem('theme') === 'true'))
   const [menu, setMenu] = React.useState(false)
   const [windowSize, setWindowSize] = React.useState(getWindowSize());
 
@@ -18,6 +18,9 @@ export default function PageTemplate(){
       window.removeEventListener('resize', handleWindowResize);
     };
   }, []);
+  React.useEffect(()=>{
+    localStorage.setItem('theme', JSON.stringify(darktheme));
+  }, [darktheme])
 
   function getWindowSize() {
     const {innerWidth, innerHeight} = window;
@@ -36,7 +39,9 @@ export default function PageTemplate(){
 
   return(
     <div className={`page-template ${ darktheme ?'page-template-dark' : 'page-template-light' } ${ menu ? 'page-template_menuopen' : '' }`}>
-      {/* <IntroPage /> */}
+      {/* <IntroPage 
+        theme = {darktheme}
+      /> */}
       <HomePage 
         theme = {darktheme}
         setTheme = {setTheme}

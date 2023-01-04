@@ -8,121 +8,343 @@
   align-items: center;
   justify-content: center;
 
-  .scaling{
-    width: fit-content;
-    height: fit-content;
-    // background-color: red;
-    animation: remove 0.6s ease-in-out 3.4s 1  both;
+  // .scaling{
+  //   width: fit-content;
+  //   height: fit-content;
+  //   // background-color: red;
+  //   animation: remove 0.6s ease-in-out 3.4s 1  both;
 
-    @keyframes remove {
-      0%{
-        scale: 1;
-      }
-      100%{
-        scale: 0;
-      }
-    }
+  //   @keyframes remove {
+  //     0%{
+  //       scale: 1;
+  //     }
+  //     100%{
+  //       scale: 0;
+  //     }
+  //   }
 
-    .draw{
-      background: none;
-      border: 0;
-      box-sizing: border-box;
-      font-family: $secondary-font;
-      // margin: 1em;
-      padding: 0.8em;
-      box-shadow: inset 0 0 0 2px transparent;
-      // color: $red;
-      font-size: 24px;
-      font-weight: 700;
-      font-style: italic;
+  //   .draw{
+  //     background: none;
+  //     border: 0;
+  //     box-sizing: border-box;
+  //     font-family: $secondary-font;
+  //     // margin: 1em;
+  //     padding: 0.8em;
+  //     box-shadow: inset 0 0 0 2px transparent;
+  //     // color: $red;
+  //     font-size: 24px;
+  //     font-weight: 700;
+  //     font-style: italic;
+  //     position: relative;
+  //     vertical-align: middle;
+
+  //     &::before,
+  //     &::after {
+  //       box-sizing: inherit;
+  //       content: '';
+  //       position: absolute;
+  //       width: 100%;
+  //       height: 100%;
+  //     }
+    
+
+  //     &::before {
+  //       border: 4px solid transparent;
+  //       width: 0;
+  //       height: 0;
+  //       top: 0;
+  //       left: 0;
+  //       animation: top 1.3s ease-in 1 both;
+  //     }
+    
+  //     @keyframes top {
+  //       0%{
+  //         width: 0;
+  //         height: 0;
+  //         border-top-color: transparent;
+  //         border-right-color: transparent ;
+  //       }
+  //       50%{
+  //         width: 100%;
+  //         height: 0;
+  //         border-top-color: $bg-highlight-color;
+  //       }
+  //       100%{
+  //         width: 100%;
+  //         height: 100%;
+  //         border-top-color: $bg-highlight-color;
+  //         border-right-color: $bg-highlight-color;
+  //       }
+  //     }
+  //     &::after {
+  //       border: 4px solid transparent;
+  //       width: 0;
+  //       height: 0;
+  //       bottom: 0;
+  //       right: 0;
+  //       animation-name: after;
+  //       animation-fill-mode: both;
+  //       animation-duration: 1s;
+  //       animation-delay: 1.3s;
+  //       animation-timing-function: ease-in;
+  //     }
+  //     @keyframes after {
+  //       0%{
+  //         width: 0%;
+  //         height: 0%;
+  //         border-bottom-color: transparent;
+  //         border-left-color: transparent;
+  //       }
+  //       50%{
+  //         width: 100%;
+  //         height: 0;
+  //         border-bottom-color: $bg-highlight-color;
+  //       }
+  //       100%{
+  //         width: 100%;
+  //         height: 100%;
+  //         border-bottom-color: $bg-highlight-color;
+  //         border-left-color: $bg-highlight-color;
+  //       }
+  //     }
+  //   }
+  //   .draw p{
+  //     animation: appear 0.1s ease-in-out 3s 1 both;
+  //     color: $bg-highlight-color;
+
+  //     @keyframes appear {
+  //       0%{
+  //         visibility: hidden;
+  //         transform: scale(0);
+
+  //       }
+  //       100%{
+  //         visibility: visible;
+  //         transform: scale(1);
+  //       }
+  //     }
+  //   }
+  // }
+}
+
+
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .box {
+    width: 250px;
+    height: 250px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    .title {
+      width: 100%;
       position: relative;
-      vertical-align: middle;
+      display: flex;
+      align-items: center;
+      height: 50px;
 
-      &::before,
-      &::after {
-        box-sizing: inherit;
-        content: '';
+      .block {
+        width: 0%;
+        height: inherit;
+        background: #ffb510;
         position: absolute;
-        width: 100%;
-        height: 100%;
+        animation: mainBlock 2s cubic-bezier(.74, .06, .4, .92) forwards;
+        display: flex;
       }
-    
 
-      &::before {
-        border: 4px solid transparent;
-        width: 0;
-        height: 0;
-        top: 0;
-        left: 0;
-        animation: top 1.3s ease-in 1 both;
-      }
-    
-      @keyframes top {
-        0%{
-          width: 0;
-          height: 0;
-          border-top-color: transparent;
-          border-right-color: transparent ;
-        }
-        50%{
-          width: 100%;
-          height: 0;
-          border-top-color: $bg-highlight-color;
-        }
-        100%{
-          width: 100%;
-          height: 100%;
-          border-top-color: $bg-highlight-color;
-          border-right-color: $bg-highlight-color;
-        }
-      }
-      &::after {
-        border: 4px solid transparent;
-        width: 0;
-        height: 0;
-        bottom: 0;
-        right: 0;
-        animation-name: after;
-        animation-fill-mode: both;
-        animation-duration: 1s;
-        animation-delay: 1.3s;
-        animation-timing-function: ease-in;
-      }
-      @keyframes after {
-        0%{
-          width: 0%;
-          height: 0%;
-          border-bottom-color: transparent;
-          border-left-color: transparent;
-        }
-        50%{
-          width: 100%;
-          height: 0;
-          border-bottom-color: $bg-highlight-color;
-        }
-        100%{
-          width: 100%;
-          height: 100%;
-          border-bottom-color: $bg-highlight-color;
-          border-left-color: $bg-highlight-color;
+      h1 {
+        font-family: 'Poppins';
+        font-size: 32px;
+        -webkit-animation: mainFadeIn 2s forwards;
+        -o-animation: mainFadeIn 2s forwards;
+        animation: mainFadeIn 2s forwards;
+        animation-delay: 1.6s;
+        opacity: 0;
+        display: flex;
+        align-items: baseline;
+        position: relative;
+
+        span {
+          width:0px;
+          height: 0px;
+          -webkit-border-radius: 50%;
+          -moz-border-radius: 50%;
+          border-radius: 50%;
+
+          background: #ffb510;
+          -webkit-animation: load 0.6s cubic-bezier(.74, .06, .4, .92) forwards;
+          animation: popIn 0.8s cubic-bezier(.74, .06, .4, .92) forwards;
+          animation-delay: 2s;
+          margin-left: 5px;
+          margin-top: -10px;
+          position: absolute;
+          bottom: 13px;
+          right: -12px;
+
         }
       }
     }
-    .draw p{
-      animation: appear 0.1s ease-in-out 3s 1 both;
-      color: $bg-highlight-color;
 
-      @keyframes appear {
-        0%{
-          visibility: hidden;
-          transform: scale(0);
+    .role {
+      width: 100%;
+      position: relative;
+      display: flex;
+      align-items: center;
+      height: 30px;
+      margin-top: -10px;
 
-        }
-        100%{
-          visibility: visible;
-          transform: scale(1);
-        }
+      .block {
+        width: 0%;
+        height: inherit;
+        background: #e91e63;
+        position: absolute;
+        animation: secBlock 2s cubic-bezier(.74, .06, .4, .92) forwards;
+        animation-delay: 2s;
+        display: flex;
+      }
+
+      p {
+        animation: secFadeIn 2s forwards;
+        animation-delay: 3.2s;
+        opacity: 0;
+         font-weight: 400;
+        font-family: 'Lato';
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 5px;
       }
     }
+  }
+}
+.container-dark{
+  background-color: $bg-dark-color;
+
+  .box{
+    .title{
+      h1{
+        color:$white;
+      }
+    }
+    .role{
+      p{
+        color: $white;
+      }
+    }
+  }
+  
+}
+.container-light{
+  background-color: $bg-light-color;
+
+  .box{
+    .title{
+      h1{
+        color:$bg-dark-color;
+      }
+    }
+    .role{
+      p{
+        color: $bg-dark-color;
+      }
+    }
+  }
+  
+}
+
+
+
+@keyframes mainBlock {
+  0% {
+    width: 0%;
+    left: 0;
+
+  }
+  50% {
+    width: 100%;
+    left: 0;
+
+  }
+  100% {
+    width: 0;
+    left: 100%;
+  }
+}
+
+@keyframes secBlock {
+  0% {
+    width: 0%;
+    left: 0;
+
+  }
+  50% {
+    width: 100%;
+    left: 0;
+
+  }
+  100% {
+    width: 0;
+    left: 100%;
+  }
+}
+
+@keyframes mainFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+@keyframes popIn {
+  0% {
+    width: 0px;
+    height: 0px;
+    background: #e9d856;
+    border: 0px solid #ddd;
+    opacity: 0;
+  }
+  50% {
+    width: 10px;
+    height: 10px;
+    background: #e9d856;
+    opacity: 1;
+    bottom: 45px;
+  }
+   65% {
+      width: 7px;
+    height: 7px;
+      bottom: 0px;
+      width: 15px
+   }
+   80% {
+      width: 10px;
+    height: 10px;
+      bottom: 20px
+   }
+  100% {
+    width: 7px;
+    height: 7px;
+    background: #e9d856;
+    border: 0px solid #222;
+    bottom: 13px;
+
+  }
+}
+
+@keyframes secFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.5;
   }
 }

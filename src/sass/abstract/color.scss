@@ -7,6 +7,8 @@ $boxShadow-dark-color: hsl(-11, 34%, 9%);
 $input-dark-color: hsl(60, 12.3%, 77.6%);
 $label-dark-color:hsl(185.2,54.8%,54.9%);
 $borderBottom-dark-color:hsl(185.2,54.8%,54.9%);
+$white: #ffffff;
+
 
 // light theme 
 $bg-light-color: hsl(0, 11%, 95%);
@@ -21,6 +23,6 @@ $input-light-color: hsl(8.6,11.9%,88.4%);
 // $text-light-color: hsl(0, 5.4%, 25.3%);
 
 // highlight theme
-$bg-highlight-color: hsl(5, 100%, 69%);
+$bg-highlight-color: hsl(5, 100%, 65%);
 $highlight-hover-color: rgba(255,110,97, 0.1);
 $image-overlay-color: rgba(255,110,97, 0.65);

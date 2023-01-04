@@ -13,7 +13,7 @@ export default function Nav(props){
             <Link to='/'><li className="list"  
                onClick = {props.width <= 768 ? props.toggleMenu : '' } 
             ><span>01.</span>Home</li></Link>
-            <li className="list"><span>02.</span>About</li>
+            <Link to='about'><li className="list"><span>02.</span>About</li></Link>
             <Link to='projects'
               onClick = {props.width <= 768 ? props.toggleMenu : '' }
             ><li className="list"><span>03.</span>Projects</li></Link>

@@ -101,6 +101,13 @@
           font-size: 1.3rem;
           font-weight: 400;
           margin-bottom: 3px;
+
+          a{
+            font-weight: $secondary-font;
+            font-size: 1.2rem;
+            font-style: italic;
+            // display: none;
+          }
         }
       }
     }
