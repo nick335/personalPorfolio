@@ -20,7 +20,9 @@ export default function HomePage(props){
       />
       <AnimatePresence >
         <Routes location={ location } key={ location.pathname } >
-          <Route path="/" element={<HomeContent />} />
+          <Route path="/" element={<HomeContent 
+            width = {props.viewportWidth}
+          />} />
           <Route path="about" element={<About />} />
           <Route path="projects" element={<Projects 
             theme = {props.theme}
