@@ -1,10 +1,40 @@
 import sunny from '../../assets/Sunny-Side-Agency.png'
+import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
+import { motion, useAnimation } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
+
 export default function Project(){
+  const projectVariants = {
+    visible:{ opacity:1,  y:0},
+    hidden: {opacity:0,  y:30}
+  }
+  const [ref, inView] = useInView({
+    threshold:0.8,
+  });
+  const controls = useAnimation();
+
+  React.useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    }
+  }, [controls, inView]);
+
   return(
-    <div className="project">
+    <motion.div className="project"
+                ref={ref}
+                animate={controls}
+                initial="hidden"
+                variants={projectVariants}
+                transition={{
+                  type:"keyframes",
+                  stiffness: 100,
+                  duration:0.6
+                }}
+
+    >
       <div className="project-imgDiv">
         <a href="#"><img alt="projectName" src={sunny}/></a>
         <div className='img-overlay'></div>
@@ -36,6 +66,6 @@ export default function Project(){
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   )
 }

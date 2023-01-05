@@ -4,7 +4,6 @@
 
 .projects{
   @include container;
-  // overflow: hidden;
   margin-top: 2.9rem;
 
   &-header{
@@ -32,8 +31,7 @@
   }
   .project{
     @include flexCenter;
-    padding-bottom: 3rem;
-    // align-items: flex-start;
+    padding-bottom: 4rem;
     
     &-imgDiv{
       width: 60% !important;
