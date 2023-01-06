@@ -7,7 +7,7 @@ export default function IntroPage(props){
     //     <div className="draw"><p>NE</p></div>
     //   </div>
     // </div>
-    <div className={`container ${props.theme ? 'container-dark': 'container-light' }`}>
+    <div className={`container ${props.theme ? 'container-dark': 'container-light' } ${props.aniDone ? 'container-done': '' } `}>
       <div className="box">
           <div className="title">
               <span className="block"></span>

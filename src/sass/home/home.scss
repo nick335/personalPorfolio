@@ -7,6 +7,8 @@
   min-height: 100vh;
   height: 100%;
   @include flexColumn;
+  display: none;
+  
 
 
   .nav {
@@ -289,4 +291,7 @@
       background-color: $text-light-color;
     }
   }
+}
+.home-page-start{
+  @include flexColumn;
 }

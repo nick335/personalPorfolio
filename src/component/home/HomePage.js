@@ -10,18 +10,20 @@ import { AnimatePresence } from "framer-motion"
 export default function HomePage(props){
   const location = useLocation()
   return(
-    <div className={`home-page ${ props.theme ?'home-page-dark' : 'home-page-light'}`}>
+    <div className={`home-page ${ props.theme ?'home-page-dark' : 'home-page-light'} ${props.aniDone ? 'home-page-start' :''}`}>
       <Nav 
       setTheme = {props.setTheme}
       theme = {props.theme}
       menu = {props.menu}
       toggleMenu = {props.toggleMenu}
       width = {props.viewportWidth}
+      endAni = {props.endAni}
       />
       <AnimatePresence >
         <Routes location={ location } key={ location.pathname } >
           <Route path="/" element={<HomeContent 
             width = {props.viewportWidth}
+            aniexpire = {props.aniexpire}
           />} />
           <Route path="about" element={<About />} />
           <Route path="projects" element={<Projects 

@@ -12,7 +12,7 @@ export default function Project(){
     hidden: {opacity:0,  y:30}
   }
   const [ref, inView] = useInView({
-    threshold:0.8,
+    threshold:0.7,
   });
   const controls = useAnimation();
 
