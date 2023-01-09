@@ -22,7 +22,7 @@ const data = [
     projectType: 'Personal Project',
     projectName: 'Quizzical',
     projetcImage: Quizzical,
-    projectDescription: '',
+    projectDescription: 'This the last challenge from the 11 hours freecodecamp react course which you can check out <a href="https://www.youtube.com/watch?v=bMknfKXIFA8">here<a>. the project is a simple version of a quiz app where you answer random question that are pulled from the API. I took it further by giving the user the ability to select the category, difficulty, number and type of question he/she will like to be asked!',
     projectTech: [
       'React',
       'CSS',

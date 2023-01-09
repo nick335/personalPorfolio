@@ -36,7 +36,7 @@ export default function SideBar(props){
         <motion.div whileHover={{y:-3.5, transition: { duration: 0.2 } }} className="icon"><a href="https://github.com/nick335"><FontAwesomeIcon icon={faGithub} /></a></motion.div>
         <motion.div whileHover={{y:-3.5, transition: { duration: 0.2 } }}  className="icon"><a href="https://www.linkedin.com/in/chigozie-erigo-435a4a248/"><FontAwesomeIcon icon={faLinkedinIn} /></a></motion.div>
         <motion.div whileHover={{y:-3.5, transition: { duration: 0.2 } }}  className="icon"><a href="https://twitter.com/ChigozieErigo"><FontAwesomeIcon icon={faTwitter} /></a></motion.div>
-        <motion.div whileHover={{y:-3.5, transition: { duration: 0.2 } }}  className="icon"><a href="#"><FontAwesomeIcon icon={ faMessage} /></a></motion.div>
+        <motion.div whileHover={{y:-3.5, transition: { duration: 0.2 } }}  className="icon"><a href="mailto:chigozieerigo05@gmail.com"><FontAwesomeIcon icon={ faMessage} /></a></motion.div>
         <div className="line"></div>
       </motion.div>
       <motion.div 
@@ -50,7 +50,7 @@ export default function SideBar(props){
           delay:7.4
         }}
         className="sidebar_email">
-        <div className="email"><motion.p whileHover={{x:-3.5,  transition: { duration: 0.2 } }}  >chigozieerigo05@gmail.com</motion.p></div>
+        <div className="email"><motion.p whileHover={{x:-3.5,  transition: { duration: 0.2 } }}><a href="mailto:chigozieerigo05@gmail.com">chigozieerigo05@gmail.com</a></motion.p></div>
         <div className="line"></div>
       </motion.div>
     </section>
