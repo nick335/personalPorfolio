@@ -61,10 +61,6 @@
     }
 
     .project{
-      background: url('../../assets/Sunny-Side-Agency.png');
-      background-repeat: no-repeat;
-      background-position: center center;
-      background-size: cover;
       margin: 0;
       margin-bottom: 2.5rem;
       line-height: 0;
@@ -79,8 +75,8 @@
         padding: 3.5rem 2rem;
         width: 100%;
         margin: 0;
-        backdrop-filter: blur(5.4px);
-        -webkit-backdrop-filter: blur(5.4px);
+        backdrop-filter: blur(3.4px);
+        -webkit-backdrop-filter: blur(3.4px);
 
         &_overline{
           h3{

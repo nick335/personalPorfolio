@@ -1,8 +1,11 @@
 import IntroPage from "./Intro/IntroPage"
 import HomePage from "./home/HomePage";
 import React from "react";
+import { useLocation } from "react-router-dom";
 
 export default function PageTemplate(){
+  const location = useLocation()
+  const urlPath = location.pathname
   const [darktheme, setDarktheme] = React.useState( JSON.parse(localStorage.getItem('theme') === 'true'))
   const [menu, setMenu] = React.useState(false)
   const [introDone, setIntroDone] = React.useState(false)
@@ -27,6 +30,11 @@ export default function PageTemplate(){
     return () => clearTimeout(timer);
   }, [])
   React.useEffect(()=>{
+    if(urlPath !== "/"){
+      setaniexpire(true)
+    }
+  }, [urlPath])
+  React.useEffect(()=>{
     localStorage.setItem('theme', JSON.stringify(darktheme));
   }, [darktheme])
 
@@ -44,7 +52,7 @@ export default function PageTemplate(){
     setMenu(prevstate => !prevstate)
   }
   function endAni(){
-    setaniexpire(true)
+    // setaniexpire(true)
     if(windowSize.innerWidth <= 768){
       toggleMenu()
     }

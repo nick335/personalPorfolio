@@ -54,10 +54,10 @@ export default function Contact(props){
           <div className="contact-body_otherOptions">
             <h4>you can also reach out at the following: </h4>
             <ul className="contactInfo_lists">
-              <li>Twitter:<a href="https://twitter.com/ChigozieErigo">@ChigozieErigo</a></li>
-              <li>GitHub:<a href="https://github.com/nick335">@nick335</a></li>
+              <li>Twitter:<a target="_blank" rel="noopener noreferrer" href="https://twitter.com/ChigozieErigo">@ChigozieErigo</a></li>
+              <li>GitHub:<a target="_blank" rel="noopener noreferrer" href="https://github.com/nick335">@nick335</a></li>
               <li>Telegram:</li>
-              <li>Linkedin:<a href="https://www.linkedin.com/in/chigozie-erigo-435a4a248/">@nicholaserigo</a></li>
+              <li>Linkedin:<a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/chigozie-erigo-435a4a248/">@nicholaserigo</a></li>
             </ul>
           </div>
         </div>

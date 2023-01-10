@@ -106,6 +106,10 @@
           font-size: 1.13rem;
           line-height: 23.4px;
           font-weight: 400px;
+
+          a{
+            color:$bg-highlight-color;
+          }
         }
       }
       &_technologies{

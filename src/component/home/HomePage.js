@@ -28,6 +28,7 @@ export default function HomePage(props){
           <Route path="about" element={<About />} />
           <Route path="projects" element={<Projects 
             theme = {props.theme}
+            width = {props.viewportWidth}
           />} />
           <Route path="contact" element={<Contact 
             theme = {props.theme}
