@@ -1,0 +1,165 @@
+@use '../abstract/color.scss' as *;
+@use '../abstract/font.scss' as *;
+@use '../abstract/mixins.scss' as *;
+
+.about{
+  @include container;
+  // background-color: red;
+  
+  overflow: hidden;
+
+  &-container{
+    max-width: 90%;
+    margin: 0 auto;
+    display: flex;
+    // align-items: center;
+
+    &_contentDiv{
+      &-header{
+        display: flex;
+        align-items: center;
+        h3{
+            font-family: $secondary-font;
+            font-weight: 700;
+            font-size: 1.9rem;
+
+            span{
+              margin-right: 0.6rem;
+              color: $bg-highlight-color;
+            }
+        }
+        .line{
+          margin-left: 2rem;
+          width: 50%;
+          height: 1px;
+        }
+      }
+      &-body{
+        padding-top: 1rem;
+        margin-right: 3rem;
+
+        p{
+          padding-bottom: 15px;
+          font-size: 20px;
+          font-family: $primary-font;
+          line-height: 26px;
+          vertical-align: baseline;
+        }
+        .list-para{
+          div{
+            display: flex;
+
+            ul{
+              margin-top: 0.7rem;
+              margin-right: 3.5rem;
+              li{
+                padding-left: 1.2rem;
+                font-family: $secondary-font;
+                font-size: 13px;
+                margin-bottom: 0.3rem;
+                position: relative;
+              }
+              li::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 9px;
+                width: 0;
+                height: 0;
+                border-left: 3.5px solid transparent;
+                border-right: 3.5px solid transparent;
+                border-bottom: 7px solid $bg-highlight-color;
+                transform: rotate(90deg);
+              }
+            }
+          }
+          
+        }
+      }
+    }
+
+    
+
+    &_imgDiv{
+      margin-top: 4rem;
+      .img-container{
+        padding: 1rem;
+        border-radius: 5px;
+        border: 2.5px solid $bg-highlight-color;
+
+        .myimg{
+          width: 300px;
+          margin-top: -30px;
+          margin-left: -30px;
+          height: 300px;
+          object-fit: fill;
+          border-radius: 5px;
+          position: relative;
+          &::after{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 300px;
+            height: 300px;
+            z-index: 40;
+            background-color: $image-overlay-color;
+          }
+
+
+        }
+      }
+    }
+  }
+}
+.about-dark{
+  transition: all ease-in-out 0.5s;
+  .about-container{
+
+    &_contentDiv{
+      &-header{
+        h3{
+          color: $header-dark-color;
+        }
+        .line{
+          background-color: $header-dark-color;
+        }
+      }
+      &-body{
+        p{
+          color: $text-dark-color;
+        }
+      }
+    }
+
+    
+  }
+}
+.about-light{
+
+  transition: all ease-in-out 0.5s;
+  .about-container{
+    // display: none;
+
+    &_contentDiv{
+      // display: none;
+      &-header{
+        // display: none;
+        h3{
+
+          color: $header-light-color;
+        }
+        .line{
+          background-color: $header-light-color;
+        }
+      }
+      &-body{
+        p{
+          color: $text-light-color;
+        }
+      }
+    }
+
+    
+  }
+}

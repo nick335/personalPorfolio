@@ -25,7 +25,7 @@ export default function HomePage(props){
             width = {props.viewportWidth}
             aniexpire = {props.aniexpire}
           />} />
-          <Route path="about" element={<About />} />
+          <Route path="about" element={<About theme = { props.theme } />} />
           <Route path="projects" element={<Projects 
             theme = {props.theme}
             width = {props.viewportWidth}

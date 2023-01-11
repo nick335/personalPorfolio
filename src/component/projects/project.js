@@ -48,7 +48,7 @@ export default function Project(props){
 
     >
       <div className="project-imgDiv">
-        <a href={props.livesite}><img alt="projectName" src={props.img}/></a>
+        <a href={props.livesite}><img alt={props.name} src={props.img}/></a>
         <div className='img-overlay'></div>
       </div>
       <div className="project-contentDiv">

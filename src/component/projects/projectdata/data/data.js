@@ -51,7 +51,7 @@ const data = [
     projectType: 'Personal Project',
     projectName: 'Space Tourism',
     projetcImage: space,
-    projectDescription: "This is a solution to the <a target='_blank' href='https://www.frontendmentor.io/challenges/space-tourism-multipage-website-gRWj1URZ3'> Intermediate Challenge</a> from the Fontend mentor site.  The project is a multipage space tourism website that provides information on some planets, crew members, and technology used in space exploration. I added slider functionality to improve the reader experience.",
+    projectDescription: "This is a solution to the <a target='_blank' href='https://www.frontendmentor.io/challenges/space-tourism-multipage-website-gRWj1URZ3'> Intermediate Challenge</a> from the Frontend Mentor Site. The project is a multipage space tourism website that provides information on some planets, crew members, and technology used in space exploration. I added slider functionality to improve the reader experience.",
     projectTech: [
       'React',
       'SCSS',

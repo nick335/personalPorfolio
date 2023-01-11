@@ -116,6 +116,7 @@
 }
 .contact-dark{
   // display: none;
+  transition:  all ease-in-out 0.5s;
 
   .contact-head{
 
@@ -174,7 +175,7 @@
   }
 }
 .contact-light{
-
+  transition: all ease-in-out 0.5s;
   .contact-head{
     .headerDiv{
 
