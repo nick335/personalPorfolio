@@ -16,6 +16,13 @@
 
     .home-content{
       @include containerxl;
+
+      &_content{
+
+        &-caption{
+          font-size: 70px;
+        }
+      }
     }
     .sidebar{
       &_social-icons{
@@ -52,7 +59,7 @@
 
       &_content{
         &-caption{
-          font-size: 74px;
+          font-size: 62px;
         }
       }
     }

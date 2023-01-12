@@ -17,23 +17,22 @@ export default function About(props){
           </div>   
           <div className="about-container_contentDiv-body">
             <p>
-              Aliquam lobortis. Ut a nisl id ante tempus hendrerit. Fusce a quam. Fusce fermentum odio nec arcu. Vestibulum facilisis, purus nec pulvinar iaculis, ligula mi congue nunc, vitae euismod ligula urna in dolor.
-              Aliquam lobortis. Ut a nisl id ante tempus hendrerit. Fusce a quam. 
+              Hi, I'm Nicholas Erigo and i enjoy making the web more beautiful, one line of code at a time. Currently studying Computer Engineering at the University of Lagos, Nigeria. 
             </p>
             <p>
-              Aliquam lobortis. Ut a nisl id ante tempus hendrerit. Fusce a quam. Fusce fermentum odio nec arcu. Vestibulum facilisis, purus nec pulvinar iaculis, ligula mi congue nunc, vitae euismod ligula urna in dolor.
-              Aliquam lobortis. Ut a nisl id ante tempus hendrerit. Fusce a quam. Fusce fermentum odio nec arcu. Vestibulum facilisis, purus nec pulvinar iaculis, ligula mi congue nunc, vitae euismod ligula urna in dolor.
+              With the aid of numerous YouTube videos and other practice tasks on the front-end mentor website, I was able to start my front-end development adventure off on the right foot at the beginning of 2021.
+              I'm passionate about crafting beautiful and intuitive web experiences. As I pursue my computer engineering degree at the University of Lagos, I'm continuously honing my coding skills and developing creative solutions that make the user experience more enjoyable.
             </p>
             <p>
-              Fusce commodo aliquam arcu. Sed in libero ut nibh placerat accumsan. Etiam ultricies nisi vel augue. Aenean tellus metus, 
+              When i am not writing code, i enjoy playing FIFA, chess, watching anime and listening to Afrobeats.
             </p>
-            <p className="list-para">
+            <div className="list-para">
               Here are some of the technologies i have worked with
-              <div>
+              <span>
                 <ul>
                   <li>HTML</li>
                   <li>CSS</li>
-                  <li>JavaScript</li>
+                  <li>JavaScript(ES6+)</li>
                   <li>SCSS</li>
                   <li>Framer motion</li>
                 </ul>
@@ -44,9 +43,9 @@ export default function About(props){
                   <li>Tailwind</li>
                   <li>GitHub</li>
                 </ul>
-              </div>
+              </span>
               
-            </p>
+            </div>
           </div>
         </div>
         <div className="about-container_imgDiv">

@@ -46,7 +46,7 @@
           vertical-align: baseline;
         }
         .list-para{
-          div{
+          span{
             display: flex;
 
             ul{
@@ -56,14 +56,14 @@
                 padding-left: 1.2rem;
                 font-family: $secondary-font;
                 font-size: 13px;
-                margin-bottom: 0.3rem;
+                margin-bottom: 0.7rem;
                 position: relative;
               }
               li::before {
                 content: "";
                 position: absolute;
                 left: 0;
-                top: 9px;
+                top: 4px;
                 width: 0;
                 height: 0;
                 border-left: 3.5px solid transparent;
@@ -129,6 +129,9 @@
         p{
           color: $text-dark-color;
         }
+        div{
+          color: $text-dark-color;
+        }
       }
     }
 
@@ -155,6 +158,9 @@
       }
       &-body{
         p{
+          color: $text-light-color;
+        }
+        div{
           color: $text-light-color;
         }
       }

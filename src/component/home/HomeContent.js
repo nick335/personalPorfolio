@@ -55,7 +55,7 @@ export default function HomeContent(props){
                 delay: props.width < 768 ? 6.3 : 6.6
               }}
               className="home-content_content-caption"
-            >I love building web products</motion.h2>
+            >Crafting Creative Web Experience.</motion.h2>
             <motion.p
               variants= {contentVariant}
               initial="hidden"
@@ -67,7 +67,7 @@ export default function HomeContent(props){
                 delay: props.width < 768 ? 6.5 : 6.8
               }} 
               className="home-content_content-para "
-            >I’m a frontend devloper specializing in building dynamic, responsive and user friendly web sites with modern technologies like React, Vue, Redux, Tailwind, Sass, Framer Motion and Gsap. Currently, I’m focused on learning Next.js, Typescript and taking my animation skill to the next level.</motion.p>
+            >I'm a Frontend Developer with a passion for creating dynamic, responsive and user friendly web sites with modern technologies like React, Redux, Tailwind, Framer Motion and SCSS. I'm now concentrating on learning Next.js, and improving my animation skills with the use GSAP.</motion.p>
         </div>
         <div className="home-content_btn">
           <Link to='contact'>

@@ -11,7 +11,6 @@ export default function Nav(props){
   const urlPath= location.pathname
   let menuVariant = {};
   const themeControlleraAniDelay = props.width < 768 ? 5.35 : 6.10
-  console.log(themeControlleraAniDelay);
   const isMobile = props.width < 768;
   if (urlPath === "/"){
      themeVariant = {
