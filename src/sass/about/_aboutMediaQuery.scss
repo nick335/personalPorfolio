@@ -41,7 +41,6 @@
     &-container{
       @include flexColumn;
       justify-content: center;
-      // max-width: 100%;
 
       &_contentDiv{
 
@@ -60,7 +59,6 @@
       &_imgDiv{
         margin-top: 1.5rem;
         margin-bottom: 4rem;
-        // background-color: red;
         @include flexCenter;
         .img-container{
           width: fit-content;

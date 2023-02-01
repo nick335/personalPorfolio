@@ -5,9 +5,10 @@
 
 .home-page{
   min-height: 100vh;
+  min-height: 100dvh;
   height: 100%;
   @include flexColumn;
-  display: none;
+  // display: none;
   
 
 
@@ -175,11 +176,9 @@
       bottom: 0;
       right: 5%;
       z-index: 2;
-      // background-color: red;
       @include flexColumn;
       justify-content: flex-start;
       align-items: flex-end;
-      // transform: rotate(90deg);
       width: fit-content;
       height: fit-content;
       .email{
@@ -195,14 +194,12 @@
           z-index: 2;
 
           &:hover{
-            // display: none;
             color: $bg-highlight-color;
             transition: color ease 0.1s;
           }
         }
       }
       .line{
-        // display: none;
         margin-top: 4.7rem;
       }
     }

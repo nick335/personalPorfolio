@@ -8,6 +8,8 @@ import { useInView } from 'react-intersection-observer';
 import parse from 'html-react-parser'
 import { nanoid } from 'nanoid';
 
+
+
 export default function Project(props){
   const techs= props.techs
   const techsli=techs.map(each=>{
@@ -15,7 +17,7 @@ export default function Project(props){
   })
   const projectVariants = {
     visible:{ opacity:1,  y:0},
-    hidden: {opacity:0,  y:30}
+    hidden: {opacity: props.width <= 768 ? 1 : 0,  y: props.width <= 768 ? 0 : 30},
   }
   const [ref, inView] = useInView({
     threshold:0.7,
@@ -40,6 +42,7 @@ export default function Project(props){
                 animate={controls}
                 initial="hidden"
                 variants={projectVariants}
+                viewport={{once: true}}
                 transition={{
                   type:"keyframes",
                   stiffness: 100,

@@ -1,5 +1,5 @@
 import { motion } from "framer-motion"
-import sunny from '../../assets/Sunny-Side-Agency.png'
+import nick from '../../assets/nicholas.jfif'
 
 export default function About(props){
   return(
@@ -17,7 +17,7 @@ export default function About(props){
           </div>   
           <div className="about-container_contentDiv-body">
             <p>
-              Hi, I'm Nicholas Erigo and i enjoy making the web more beautiful, one line of code at a time. Currently studying Computer Engineering at the University of Lagos, Nigeria. 
+              Hi, I'm Erigo Chigozie Nicholas and i enjoy making the web more beautiful, one line of code at a time. Currently studying Computer Engineering at the University of Lagos, Nigeria. 
             </p>
             <p>
               With the aid of numerous YouTube videos and other practice tasks on the front-end mentor website, I was able to start my front-end development adventure off on the right foot at the beginning of 2021.
@@ -30,8 +30,8 @@ export default function About(props){
               Here are some of the technologies i have worked with
               <span>
                 <ul>
-                  <li>HTML</li>
-                  <li>CSS</li>
+                  <li>HTML5</li>
+                  <li>CSS3</li>
                   <li>JavaScript(ES6+)</li>
                   <li>SCSS</li>
                   <li>Framer motion</li>
@@ -50,7 +50,7 @@ export default function About(props){
         </div>
         <div className="about-container_imgDiv">
           <div className="img-container">
-            <img alt="myImg" className="myimg" src={sunny} />
+            <img alt="myImg" className="myimg" src={nick} />
           </div>
         </div>
       </section>

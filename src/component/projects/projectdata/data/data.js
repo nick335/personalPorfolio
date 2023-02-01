@@ -43,8 +43,9 @@ const data = [
       'React',
       'SCSS',
       'React DnD',
+      'Firebase'
     ],
-    projectLivesite: 'https://tourmaline-pasca-961af3.netlify.app/',
+    projectLivesite: 'https://firebasetodoapp2.netlify.app/',
     projectCodelink: 'https://github.com/nick335/todo-app-react' 
   },
   {

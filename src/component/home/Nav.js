@@ -48,7 +48,7 @@ export default function Nav(props){
           duration: 0.25,
           delay:5
          }}
-         ><h4>NE</h4></motion.div>
+         ><h4><Link to='/'>NE</Link></h4></motion.div>
         <div className={`page-route ${menuActive}`}>
           <ul className={`page-route_lists ${menuActive}`}>
             <Link to='/'><motion.li 

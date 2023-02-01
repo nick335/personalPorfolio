@@ -37,7 +37,6 @@
     max-width: 90%;
 
     &-head{
-      // display: none;
       margin-top: 4rem;
     }
   }
@@ -61,7 +60,6 @@
 @media #{$media-mobile}{
   .contact{
 
-    // display: none;
     &-head{
       .headerDiv{
 
@@ -83,7 +81,6 @@
 }
 @media #{$media-mobile-sm}{
   .contact{
-    // background-color: red;
     padding-left: 0;
 
     &-head{
@@ -95,7 +92,6 @@
     }
     &-body{
       &_form{
-        // display: none;
         width: 100%;
       }
     }

@@ -134,7 +134,7 @@
   }
   .projects-dark{
     .project{
-     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+     box-shadow: 0 40px 30px rgba(0, 0, 0, 0.3);
       &-contentDiv{
         transition: all ease-in-out 0.5s;
         background: rgba(33, 30, 30, 0.9);
@@ -144,7 +144,7 @@
   }
   .projects-light{
     .project{
-      box-shadow: 0 4px 30px rgba(255, 255, 255, 0.1);
+      box-shadow: 0 60px 60px rgba(255, 255, 255, 0.4);
       &-contentDiv{
         transition: all ease-in-out 0.5s;
         background: rgba(244,241,241,0.85);

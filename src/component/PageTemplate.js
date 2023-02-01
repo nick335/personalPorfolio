@@ -11,6 +11,10 @@ export default function PageTemplate(){
   const [introDone, setIntroDone] = React.useState(false)
   const [windowSize, setWindowSize] = React.useState(getWindowSize());
   const [aniexpire, setaniexpire] = React.useState(false)
+  let vh = window.innerHeight * 0.01
+  React.useEffect(()=> {
+    document.documentElement.style.setProperty('--vh', `${vh}px`)
+  }, [vh])
 
   React.useEffect(() => {
     function handleWindowResize() {
@@ -56,6 +60,7 @@ export default function PageTemplate(){
     if(windowSize.innerWidth <= 768){
       toggleMenu()
     }
+
   }
 
 

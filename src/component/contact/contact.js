@@ -9,10 +9,11 @@ export default function Contact(props){
     e.preventDefault();
 
     emailjs.sendForm('service_do94por', 'template_pqz9puo', form.current, 'u7q0_gDohweK0mrTV')
-      .then((result) => {
-          console.log(result.text);
+      .then(() => {
+          props.success()
+          form.current.reset()
       }, (error) => {
-          console.log(error.text);
+          props.error(error.text)
       });
   };
 
@@ -56,7 +57,7 @@ export default function Contact(props){
             <ul className="contactInfo_lists">
               <li>Twitter:<a target="_blank" rel="noopener noreferrer" href="https://twitter.com/ChigozieErigo">@ChigozieErigo</a></li>
               <li>GitHub:<a target="_blank" rel="noopener noreferrer" href="https://github.com/nick335">@nick335</a></li>
-              <li>Telegram:</li>
+
               <li>Linkedin:<a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/chigozie-erigo-435a4a248/">@nicholaserigo</a></li>
             </ul>
           </div>
